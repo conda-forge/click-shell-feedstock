@@ -1,17 +1,17 @@
 {% set name = "click-shell" %}
-{% set version = "2.0" %}
+{% set version = "2.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 01d8ea4b05f4889c144f9bdd19740c5c8ce981ec77f57e753ed134216f96bbb8
+  sha256: ce0c91faae284c41a39bec966f928791ad4a45763755445f1fe2041fd091aa37
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -30,7 +30,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'An extension to click that easily turns your click app into a shell utility'
+  summary: An extension to click that easily turns your click app into a shell utility
   doc_url: https://click-shell.readthedocs.io/
   dev_url: https://github.com/clarkperkins/click-shell
 
