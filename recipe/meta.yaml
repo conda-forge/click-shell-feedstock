@@ -1,12 +1,12 @@
 {% set name = "click-shell" %}
-{% set version = "2.0" %}
+{% set version = "2.1" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 01d8ea4b05f4889c144f9bdd19740c5c8ce981ec77f57e753ed134216f96bbb8
+  sha256: ce0c91faae284c41a39bec966f928791ad4a45763755445f1fe2041fd091aa37
 
 build:
   number: 0
@@ -18,7 +18,7 @@ requirements:
     - pip
     - python
   run:
-    - click >=6.0
+    - click >=7.0
     - python
 
 test:
@@ -37,3 +37,4 @@ about:
 extra:
   recipe-maintainers:
     - holgern
+    - jan-janssen
